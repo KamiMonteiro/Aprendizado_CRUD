@@ -1,6 +1,6 @@
 
 import java.util.ArrayList;
-//import java.util.Scanner;
+//import java.util.Scanner; //apenas caso de usar classe gloal
 
 public class Main {
     public static void main(String[] args) {
