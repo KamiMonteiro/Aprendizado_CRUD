@@ -41,6 +41,17 @@ public class Main {
                 System.out.println("✨ Doce encontrado: ");
                 doceAtual.mostrarInfoDoce();
                 encontrado = true;
+
+
+                String novoNome = Teclado.lerString("Digite novo doce a ser adicionado: ");
+                double novoPreco = Teclado.lerDouble("Digite novo preço");
+
+                doceAtual.nomeDoce = novoNome;
+                doceAtual.preco = novoPreco;
+
+                System.out.println("Doce atualizado com sucesso");
+                doceAtual.mostrarInfoDoce();
+
                 break;
             }
         }
