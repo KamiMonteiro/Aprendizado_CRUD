@@ -29,9 +29,8 @@ public class Main {
         listaDeDoces.add(doce3);
         listaDeDoces.add(doce4);
 
-
+/*
         //Scanner para ler entrada do usuário
-
         String nomeBuscado = Teclado.lerString("Digite o dooce que procura: ");
 
         boolean encontrado = false;
@@ -60,7 +59,26 @@ public class Main {
             System.out.println("😔 Doce não encontrado");
         }
 
-/*
+ */
+        //Código que pede ao usuário o deoce que será removido e quarda na variável nomeDoceRemover para excluir posteriormente
+    String nomeDoceRemover = Teclado.lerString("Digite o doce que deseja excluir da lista: ");
+
+      Doce doceParaRemover = null;
+
+      for(Doce doceAtual : listaDeDoces) {
+          if (doceAtual.nomeDoce.equalsIgnoreCase(nomeDoceRemover)) {
+              doceParaRemover = doceAtual;
+              break;
+          }
+      }
+
+      if (doceParaRemover != null) {
+          listaDeDoces.remove(doceParaRemover);
+          System.out.println("✅ Doce removido da lista com sucesso\n");
+      } else {
+          System.out.println("❌ Doce não encontrado\n");
+      }
+
         System.out.println(" 📃 Lista de Doces: ");
         //Pega cada doce da lista um por um e mostra
         for (Doce d : listaDeDoces) {
@@ -70,6 +88,5 @@ public class Main {
 
         }
 
- */
     }
 }
